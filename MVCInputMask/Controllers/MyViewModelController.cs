@@ -1,4 +1,5 @@
-﻿using MVCInputMask.Models;
+﻿using MVCInputMask.Attributes;
+using MVCInputMask.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,14 @@ using System.Web.Mvc;
 
 namespace MVCInputMask.Controllers
 {
+    [NgController(typeof(MyViewModel), InheritanceFriendly = true, Name = "MyViewModelController")]
     public class MyViewModelController : Controller
     {
+        public ActionResult AngularIndex()
+        {
+            return View();
+        }
+
         public ActionResult Create()
         {
             return View(new MyViewModel()

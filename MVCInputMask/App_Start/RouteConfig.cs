@@ -16,7 +16,7 @@ namespace MVCInputMask
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "MyViewModel", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "MyViewModel", action = "AngularIndex", id = UrlParameter.Optional }
             );
         }
     }

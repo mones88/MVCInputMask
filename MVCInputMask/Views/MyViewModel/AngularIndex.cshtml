@@ -1,0 +1,18 @@
+﻿@model MVCInputMask.Models.MyViewModel
+@{
+    ViewBag.Title = "AngularIndex";
+    Layout = "~/Views/Shared/AngularLayout.cshtml";
+}
+
+<h2>AngularIndex</h2>
+
+<div ng-app="myApp" ng-controller="MyViewModelController as c">
+    {{ hello }}
+    <fieldset>
+        <label for="date">Date:</label>
+        <input type="date" id="date" ng-model="MyViewModel.Date" />
+
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" ng-model="MyViewModel.PhoneNumber" />
+    </fieldset>
+</div>

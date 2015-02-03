@@ -7,6 +7,7 @@ using System.Web;
 
 namespace MVCInputMask.Models
 {
+    [NgModel]
     public class MyViewModel
     {
         [Mask("99/99/9999")]
@@ -15,6 +16,7 @@ namespace MVCInputMask.Models
         public DateTime Date { get; set; }
 
         [Mask(@"(+3\\9) 999-9999999")]
+        [NgField(DefaultValue = "555 123456")]
         public String PhoneNumber { get; set; }
     }
 }
